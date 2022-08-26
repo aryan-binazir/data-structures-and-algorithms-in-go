@@ -1,15 +1,24 @@
-/**
- * Definition for singly-linked list.
- * type ListNode struct {
- *     Val int
- *     Next *ListNode
- * }
- */
+package main
+
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
+
+func main() {
+
+}
+
 func removeElements(head *ListNode, val int) *ListNode {
+
+	for head.Val == val {
+		head = head.Next
+	}
+
 	current := head
-	for current.Next != nil {
+
+	for current != nil {
 		if current.Next.Val == val {
-			fmt.Println(current.Val, current.Next.Val)
 			current.Next = current.Next.Next
 		}
 		current = current.Next
