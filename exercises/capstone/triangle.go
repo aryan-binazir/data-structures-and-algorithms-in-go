@@ -23,7 +23,6 @@ func findMinPathSum(triangle [][]int, row, column int, cache map[[2]int]int) int
 	} else {
 		sumToAdd = currValue + firstSum
 	}
-	fmt.Println(sumToAdd)
 
 	cache[[2]int{row, column}] = sumToAdd
 	return cache[[2]int{row, column}]
